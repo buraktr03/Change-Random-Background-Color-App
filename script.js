@@ -3,7 +3,7 @@ const btnMouseOver = document.getElementById("btn-mouseOver");
 const spanColor = document.getElementById("spanColor");
 
 //? HTML color names array
-//? 141 color in array
+// we have 141 html color name in this array
 const htmlColorNames = [
   "aliceblue",
   "antiquewhite",
