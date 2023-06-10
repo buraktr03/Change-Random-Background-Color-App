@@ -149,26 +149,22 @@ const htmlColorNames = [
 console.log(htmlColorNames.length); //141
 
 //? produce a random number 1 to 141
-// const min = 0;
-// const max = 140;
-// const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+const min = 0;
+const max = 140;
+const randomNumber = () => Math.floor(Math.random() * (max - min + 1)) + min;
 
 // console.log(htmlColorNames[randomNumber]);
 
 //? Events
 
 btnClick.addEventListener("click", () => {
-  const min = 0;
-  const max = 140;
-  const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
-  document.body.style.backgroundColor = htmlColorNames[randomNumber];
-  spanColor.textContent = "->" + htmlColorNames[randomNumber] + "<-";
+  const color = randomNumber();
+  document.body.style.backgroundColor = htmlColorNames[color];
+  spanColor.textContent = "->" + htmlColorNames[color] + "<-";
 });
 
 btnMouseOver.addEventListener("mouseover", () => {
-  const min = 0;
-  const max = 140;
-  const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
-  document.body.style.backgroundColor = htmlColorNames[randomNumber];
-  spanColor.textContent = "->" + htmlColorNames[randomNumber] + "<-";
+  const color = randomNumber();
+  document.body.style.backgroundColor = htmlColorNames[color];
+  spanColor.textContent = "->" + htmlColorNames[color] + "<-";
 });
